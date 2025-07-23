@@ -1,0 +1,86 @@
+.ticket-card {
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  background-color: #fff;
+  transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.ticket-card.open {
+  border-left: 5px solid #f59e0b; /* Turuncu */
+}
+
+.ticket-card.resolved {
+  border-left: 5px solid #10b981; /* Yeşil */
+  opacity: 0.85;
+}
+
+.ticket-card h3 {
+  margin-bottom: 8px;
+}
+
+.ticket-card p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 20px auto 10px 20px; /* sola hizalanır */
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  background-color: #e0e7ff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  color: #1e40af;
+}
+
+.filter-buttons button:hover {
+  background-color: #c7d2fe;
+}
+
+.filter-buttons .active {
+  background-color: #1e40af;
+  color: white;
+}
+
+.empty-message {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.resolve-btn {
+  margin-top: 10px;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .ticket-card {
+    margin: 10px 20px;
+    padding: 15px;
+  }
+
+  .resolve-btn {
+    width: 100%;
+  }
+}
+
+
